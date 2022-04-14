@@ -1,0 +1,31 @@
+.toggle_button {
+    cursor:pointer;
+    display:block;
+    background:#eee;
+    text-align:center;
+    border:1px solid #ccc;
+}
+#toggle_button,
+#toggle_contents {
+    height:0;
+    overflow:hidden;
+    position:absolute;
+}
+#toggle_button:checked + #toggle_contents {
+    height:auto;
+    position:relative;
+    border:1px solid #ccc;
+    border-top:0;
+    padding:10px;
+}
+.close_button {
+    cursor:pointer;
+    position:absolute;
+    top:5px;
+    right:5px;
+    padding:3px;
+    font-size:10px;
+    line-height:1;
+    background:#555;
+    color:#fff;
+}

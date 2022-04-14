@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <!-- ref와 rel의 차이도 있음 조심해야함 -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        header {
+            background-color: rgba(10, 23, 136, 0.651);
+            margin-bottom: 2px
+        }
+        #projects {
+            background-color: rgb(240, 170, 105);
+            margin-bottom: 2px
+        }
+        footer {
+            background-color: rgb(114, 161, 247);
+        }
+    </style>
+    <script src="./css/bootstrap.js"></script>
+</head>
+<body>
+        <!-- semantic tag : 구분용 태그 -->
+    <!-- 메뉴영역 -->
+    <header>
+        <!-- py-3: 패딩을 y축으로 위아래 3px씩 -->
+        <div class="container d-flex align-items-center py-3">
+            <!-- data-bs-toggle="offcanvas" : 메뉴가 스르륵 나타나는 소석을 이야기 함 -->
+            <!-- data-bs-target="#offcanvas" : offcanvas에서 보여줄 내용(id가 offcanvas로 지정된 요소를 보여주겠다.) -->
+            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                <!-- svg : 벡터 그래픽 이미지 . 안깨지는게 장점 -->
+                <!-- 햄버거 모양 이미지 -->
+                <img src="./images/menu.svg" alt="">
+            </button>
+            <!-- 옆에 추가창에 대한 내용 추가 -->
+            <div class="offcanvas offcanvas-start" id="offcanvas">
+                <div class="offcanvas-header">
+                    <button class="btn-close" data-bs-dismiss="offcanvas">
+                        <!-- 버튼 닫기 누르면 offcanvas를 닫는다 라는 의미 -->
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" onclick="location.href='./index.html'">About me</li>
+                        <!-- <div>
+                            <ul>
+                                <li>나</li>
+                                <a onclick="clickcr(this,'ctw.catlist','','',event);" id="category14" href="/PostList.naver?blogId=iskaid&amp;from=postList&amp;categoryNo=14&amp;parentCategoryNo=14 " class="itemfont cm-col1 _selectCurrentCategory _param(1000013777|13317|widget_category|14) on">취미</a>
+                                <li>너</li>
+                            </ul>
+                        </div> -->
+                        <!-- 원래 -->
+                        <li class="list-group-item" onclick="location.href='./skills.html'">Skills</li>
+                        <!-- 연습 -->
+                        <!-- <li class="list-group-item">
+                            <a onclick="skills()" id="skills-toggle" href="./Skills.html">Skills</a>
+                        </li> -->
+                        <li class="list-group-item" onclick="location.href='./projects.html'">Projects</li>
+                        <li class="list-griup-item" onclick="location.href='./information.html'">Information</li>"
+                        <li class="list-group-item" onclick="location.href='./contacts.html'">Contract</li>
+                    </ul>
+                    <input type="text" class="form-control mb-2" placeholder="Search">
+                    <!-- d-grid : 한줄에 채워서 표시 가능 -->
+                    <div class="d-grid mb-2">
+                        <button class="btn btn-outline-primary">Sign in</button>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary">Sign up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- css에서 주어진 class 설정 -->
+            <!-- 4개 메뉴에 대한 항목 -->
+            <ul class="nav flex-grow-1">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light" onclick="location.href='./index.html'">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light" onclick="location.href='./skills.html'">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <!-- 해당 페이지 내에서 특정 영역으로 이동할 때 
+                    href 속성값에 id 값을 주면 해당링크가 제일 위에 존재함-->
+                    <!-- ex: href="#projects -> section에 id=projects 명명되어있기에 적용 됨" -->
+                    <!-- 대소문자 따져야하는것 같음 -->
+                    <a href="#" class="nav-link text-light" onclick="location.href='./projects.html'">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light" onclick="location.href='./contacts.html'">Contacts</a>
+                </li>
+            </ul>
+            <!-- d-flex : 일자로 표현되게 해줌 -->
+            <!-- 입력 및 가입 로그인 항목 -->
+            <div class="d-flex">
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn btn-link text-light text-decoration-none flex-shrink-0"  onclick="location.href='./sign_in.html'">Sign in</button>
+                <!-- flex-shrink-0 : 아웃라인 찌그러지지않게 자동으로 맞춰주는 것.? -->
+                <button class="btn btn-outline-light flex-shrink-0" onclick="location.href='./sign_up.html'">Sign up</button>
+            </div>
+
+        </div>
+        <div>
+
+        </div>
+    </header>
+    <!-- 본문영역 -->
+
+    <section>
+        
+    </section>
+    
+</body>
+</html>

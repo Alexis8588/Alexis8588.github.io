@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Contacts</title>
+</head>
     <!-- ref와 rel의 차이도 있음 조심해야함 -->
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/toggle.css">
     <style>
         header {
             background-color: rgba(10, 23, 136, 0.651);
+            margin-bottom: 2px
+        }
+        #projects {
+            background-color: rgb(240, 170, 105);
             margin-bottom: 2px
         }
         footer {
@@ -20,7 +24,7 @@
     <script src="./css/bootstrap.js"></script>
 </head>
 <body>
-    <!-- semantic tag : 구분용 태그 -->
+        <!-- semantic tag : 구분용 태그 -->
     <!-- 메뉴영역 -->
     <header>
         <!-- py-3: 패딩을 y축으로 위아래 3px씩 -->
@@ -55,17 +59,16 @@
                         <!-- <li class="list-group-item">
                             <a onclick="skills()" id="skills-toggle" href="./Skills.html">Skills</a>
                         </li> -->
-                        <li class="list-group-item toggle" onclick="location.href='./projects.html'">Projects</li>
-                        <!-- <button id="btn" src> -->
+                        <li class="list-group-item" onclick="location.href='./projects.html'">Projects</li>
                         <li class="list-group-item" onclick="location.href='./contacts.html'">Contract</li>
                     </ul>
                     <input type="text" class="form-control mb-2" placeholder="Search">
                     <!-- d-grid : 한줄에 채워서 표시 가능 -->
                     <div class="d-grid mb-2">
-                        <button class="btn btn-outline-primary" onclick="location.href='./sign_in.html'">Sign in</button>
+                        <button class="btn btn-outline-primary">Sign in</button>
                     </div>
                     <div class="d-grid">
-                        <button class="btn btn-primary" onclick="location.href='./sign_up.html'">Sign up</button>
+                        <button class="btn btn-primary">Sign up</button>
                     </div>
                 </div>
             </div>
@@ -82,18 +85,7 @@
                     <!-- 해당 페이지 내에서 특정 영역으로 이동할 때 
                     href 속성값에 id 값을 주면 해당링크가 제일 위에 존재함-->
                     <!-- ex: href="#projects -> section에 id=projects 명명되어있기에 적용 됨" -->
-                    <!-- 토글을 위해 잠시 소거 -->
                     <a href="#" class="nav-link text-light" onclick="location.href='./projects.html'">Projects</a>
-                    <!-- 토글 테스트 -->
-                    <!-- <a href="#" class="nav-link text-light">
-                        <label for="toggle_button" class="toggle_button">Projects</label>
-                        <input type="checkbox" id="toggle_button">
-                        <div id="toggle_contents">
-                            11
-                            <label for="toggle_button" class="close_button">X</label>
-                        </div>
-
-                    </a> -->
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link text-light" onclick="location.href='./contacts.html'">Contacts</a>
@@ -103,7 +95,7 @@
             <!-- 입력 및 가입 로그인 항목 -->
             <div class="d-flex">
                 <input type="text" class="form-control" placeholder="Search">
-                <button class="btn btn-link text-light text-decoration-none flex-shrink-0" onclick="location.href='./sign_in.html'">Sign in</button>
+                <button class="btn btn-link text-light text-decoration-none flex-shrink-0"  onclick="location.href='./sign_in.html'">Sign in</button>
                 <!-- flex-shrink-0 : 아웃라인 찌그러지지않게 자동으로 맞춰주는 것.? -->
                 <button class="btn btn-outline-light flex-shrink-0" onclick="location.href='./sign_up.html'">Sign up</button>
             </div>
@@ -114,29 +106,15 @@
         </div>
     </header>
 
-    <!-- 본문영역 -->
-    <section id="intro">
-        <!-- container-xl, container-sm 등에 의해서 폭이 결정됨. -->
-        <!-- alt 속성 : 그림이 랜더링 되지 못할 때 나타날 문자열을 지정하기 위한 값 -->
-        <div class="container text-center bg-info mb-2">
-            <!-- py : 위 아래를 한번에 pt : 위에 만 -->
-            <div class="py-3"></div>
+    <section>
+        <div class="row">
+            <div class="row text-center" style="background-color: antiquewhite;">
+                <div class="row text-center">ddddsds</div>
 
-            <h3 class="pt-2 mb-3">Hello My World!</h3>
-            <img src="./images/image1.jpg" alt="" width="310" height="163">
-            <h3 class="self mb-5 mt-3">Introduce to myself about My project & skill</h3>
-            <div>
-                <h5>About me</h5>
             </div>
-
-            <div>
-            <a onclick="href=''" class="btn btn-primary my-1">????</a>
-            </div>
-            <a onclick="href='https://github.com/michael85-dev'" class="btn btn-primary my-2">Girhub Link</a>
         </div>
-        <!-- 캐러셀 이라는 것이 있음 주로 11번가 등에서 화면 전환 되는것. -->
     </section>
-
+    
     <!-- 푸터영역 -->
     <footer>
         <!-- 푸터는 연결 링크 등에 대해서 넣는 것을 이야기 함. -->
@@ -176,5 +154,6 @@
               </div>
         </div>
     </footer>
+    
 </body>
 </html>
